@@ -6,15 +6,7 @@ import './Formulario.css'
 
 const Formulario = (props) => {
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Desing',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
+    
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -58,7 +50,7 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterar={valor => setTime(valor)}
                 />
